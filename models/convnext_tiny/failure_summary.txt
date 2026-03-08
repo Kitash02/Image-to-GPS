@@ -1,0 +1,7 @@
+iPhone mean error: nan m
+iPhone median error: nan m
+iPhone acc@5m: nan%
+
+Android mean error: 11.9552 m
+Android median error: 7.2722 m
+Android acc@5m: 35.62%
