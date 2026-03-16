@@ -1,0 +1,117 @@
+# ============================================================================
+# DATA & IMAGES (DO NOT COMMIT)
+# ============================================================================
+# Images are user-provided and should not be versioned
+data/dataset_root/images/
+data/dataset_root/*.jpg
+data/dataset_root/*.jpeg
+data/dataset_root/*.png
+data/dataset_root/*.HEIC
+data/dataset_root/*.heic
+
+# Generated master dataset (can regenerate from EXIF)
+data/dataset_root/campus_gps_master_dataset.csv
+
+# ============================================================================
+# TRAINED MODELS & ARTIFACTS (LARGE FILES)
+# ============================================================================
+# Model weights are large; use Git LFS if versioning is needed
+models/**/*.pth
+models/**/*.pt
+models/**/best_model.pth
+
+# Scalers and checkpoints
+models/**/*.pkl
+models/**/*.pickle
+
+# Training artifacts
+models/**/scaler.pkl
+models/**/checkpoint*.pth
+
+# ============================================================================
+# PYTHON & VIRTUAL ENVIRONMENTS
+# ============================================================================
+venv/
+env/
+ENV/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ============================================================================
+# IDE & EDITOR
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================================
+# OS & SYSTEM FILES
+# ============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.lnk
+.AppleDouble
+.LSOverride
+
+# ============================================================================
+# JUPYTER & NOTEBOOKS
+# ============================================================================
+.ipynb_checkpoints/
+*.ipynb
+.jupyter/
+
+# ============================================================================
+# TEMPORARY & LOG FILES
+# ============================================================================
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# ============================================================================
+# PYTEST & COVERAGE
+# ============================================================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ============================================================================
+# TRAINING RESULTS (OPTIONAL - comment out to version)
+# ============================================================================
+# Uncomment if you want to track training history
+# models/**/history.csv
+# models/**/test_results.csv
+# models/**/test_results.xlsx
+# models/**/config.json
+
+# ============================================================================
+# LARGE EXPERIMENTAL OUTPUTS
+# ============================================================================
+results/
+experiments/
+*.xlsx
+*.xls
+*.csv.bak
