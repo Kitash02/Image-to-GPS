@@ -1,0 +1,17 @@
+{
+    "backbone": "resnet50",
+    "input_size": 224,
+    "epochs": 100,
+    "batch_size": 32,
+    "lr_head": 0.001,
+    "lr_backbone": 0.0001,
+    "huber_delta": 0.1,
+    "dropout": 0.3,
+    "gps_weight": 0.8,
+    "area_weight": 0.2,
+    "train_val_test_split": [
+        0.7,
+        0.15,
+        0.15
+    ]
+}
