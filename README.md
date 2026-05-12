@@ -233,23 +233,11 @@ having seen val/test coordinates during normalization.
 
 ### 7.2 Metrics: WGS-84 Haversine, MDE, MedDE, Acc@t
 
-Distances are computed in float64 so rounding does not dominate over small
-intra-campus displacements:
-
-$$d = 2R \arcsin\left(\sqrt{\sin^2\!\left(\tfrac{\Delta\phi}{2}\right) + \cos\phi_1 \cos\phi_2 \sin^2\!\left(\tfrac{\Delta\lambda}{2}\right)}\right)$$
-
-with $R = 6{,}378{,}137$ m (WGS-84 equatorial radius), inputs in degrees, output
-in meters.
-
-Aggregate metrics on the test split:
-
-$$\text{MDE} = \tfrac{1}{N}\sum_{i=1}^{N} d_i \qquad
-\text{MedDE} = \operatorname{median}(d_1, \ldots, d_N) \qquad
-\text{Acc@}t = \frac{|\{i : d_i \le t\}|}{N} \times 100\%$$
-
-In this report `Acc@5m` is treated as the *effective perfect-localization* metric
-because the ground truth itself came from consumer-phone EXIF GPS, whose
-quantization is of that order.
+Distances are computed using the Haversine formula in float64 with R = 6,378,137 m
+(WGS-84 equatorial radius), inputs in degrees, output in meters. Aggregate metrics
+reported on the test split: Mean Distance Error (MDE), Median Distance Error (MedDE),
+and Accuracy within t meters (Acc@5m, Acc@10m). See `src/metrics.py` for the
+implementation.
 
 ### 7.3 Generic-Prefix Folder Anonymity
 
