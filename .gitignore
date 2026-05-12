@@ -9,6 +9,11 @@ data/dataset_root/*.png
 data/dataset_root/*.HEIC
 data/dataset_root/*.heic
 
+# Actual photos folder (HEIC images)
+data/photos/
+**/*.HEIC
+**/*.heic
+
 # Generated master dataset (can regenerate from EXIF)
 data/dataset_root/campus_gps_master_dataset.csv
 
@@ -115,3 +120,19 @@ experiments/
 *.xlsx
 *.xls
 *.csv.bak
+
+# ============================================================================
+# PROJECT-SPECIFIC
+# ============================================================================
+# Merge artifacts and bundles
+hybrid_merge_artifacts/
+*.bundle
+
+# Word documents (submit PDF only)
+*.docx
+*.doc
+
+# Local run outputs (not part of submission)
+output/
+predictions/
+test_output/

@@ -5,6 +5,21 @@ It includes dataset generation from EXIF, training multiple CNN backbones, fine-
 from a best-baseline checkpoint, deterministic evaluation, and single-image inference
 (including HEIC support).
 
+## Dataset & Model Weights
+
+Due to file size constraints, the full image dataset and trained model weights (`.pth`, `.pkl`)
+are hosted on Google Drive:
+
+**[Google Drive — Dataset & Models](https://drive.google.com/drive/folders/1a57ViDiH0pJI-2yFKobmQAdQr0JqUISF)**
+
+Download and place files under:
+```
+dataset_root/
+├── images/       ← full image dataset (~1,900 images)
+└── gt.csv        ← ground truth (image_name, Latitude, Longitude)
+```
+Trained model weights go under `models/finetune_photos_runs/resnet50_20260315_171307/`.
+
 ## Reproducibility First
 
 This README is written to satisfy the course requirement *"README.md must explain how
